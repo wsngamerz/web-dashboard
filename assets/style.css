@@ -4,9 +4,10 @@ html, body {
 	padding: 0;
 	margin: 0;
 }
+
 body {
 	font-family: Roboto, Noto, sans-serif;
-	font-weight:lighter;
+	font-weight: lighter;
 	background: url("background.jpeg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -14,13 +15,14 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	position: relative;
 }
 
 .clock{
-	text-align:center;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:15%;
 	font-size: 75pt;
 	color: #FFFFFF;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
