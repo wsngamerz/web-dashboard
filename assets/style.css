@@ -19,7 +19,7 @@ body {
 }
 
 .clock{
-	font-size: 75pt;
+	font-size: 25vw;
 	color: #FFFFFF;
 	position: absolute;
 	top: 50%;
