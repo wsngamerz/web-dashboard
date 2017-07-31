@@ -1,27 +1,17 @@
-function startTime() {
-    var today=new Date();
-    var h=today.getHours();
-    var m=today.getMinutes();
-    var s=today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('clock').innerHTML = h+":"+m+":"+s;
-    setTimeout(function(){startTime()},250);
+window.onload = function() { startClock();} // run clock on load
+
+function startClock() {
+    var t=new Date();
+    var h=t.getHours();
+    var m=t.getMinutes();
+    var s=t.getSeconds();
+    m=check(m);
+    s=check(s);
+    document.getElementById('clock').innerHTML=h+":"+m+":"+s;
+    setTimeout(function(){startClock()},250);
 }
 
-function checkTime(i) {
-    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+function check(i) {
+    if(i<10){i="0"+i};  //  zero front of num < 10 to make look better
     return i;
-}
-
-requestFullscreen(document.getElementById('body'));
-
-function requestFullscreen(element) {
-	if (element.requestFullscreen) {
-		element.requestFullscreen();
-	} else if (element.mozRequestFullScreen) {
-		element.mozRequestFullScreen();
-	} else if (element.webkitRequestFullScreen) {
-		element.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-	}
 }
